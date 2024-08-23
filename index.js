@@ -21,7 +21,7 @@ app.get("/tasks", async (req, res) => {
     }
 });
 
-app.get("/tasks/:id", async (req, res) => {
+/*app.get("/tasks/:id", async (req, res) => {
     try {
         const taskById = req.params.id;
         const task = await TaskModel.findById(taskById);
@@ -33,6 +33,7 @@ app.get("/tasks/:id", async (req, res) => {
         res.status(500).send(error.message);
     }
 });
+*/
 
 app.post("/tasks", async (req, res) => {
     try {
