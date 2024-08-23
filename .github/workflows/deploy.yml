@@ -15,3 +15,14 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "alexandre-task-list" #Must be unique in Heroku
           heroku_email: "alexandreportella222@gmail.com"
+
+  deploy:
+    runs-on: ubuntu-latest
+    evironment: production
+    steps: 
+      - name: Checkout code
+        users: actions/checkout@v2
+
+      - name: Deploy to Production
+        run: |
+          curl "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
