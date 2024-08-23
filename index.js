@@ -15,4 +15,4 @@ app.use("/tasks", TaskRouter);
 
 const port = process.env.PORT || 8000;
 
-app.listen(8000, () => console.log(`listen on port ${port} 🚀`));
+app.listen(port, () => console.log(`listen on port ${port} 🚀`));
